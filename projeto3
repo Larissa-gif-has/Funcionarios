@@ -1,6 +1,5 @@
 funcionario = dict()
 dados = dict()
-dados1 = dict()
 for c in range(0, 1):
     print('--------------------------')
     funcionario['nome'] = str(input('Nome:'))
