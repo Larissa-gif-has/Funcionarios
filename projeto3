@@ -1,0 +1,30 @@
+funcionario = dict()
+dados = dict()
+dados1 = dict()
+for c in range(0, 1):
+    print('--------------------------')
+    funcionario['nome'] = str(input('Nome:'))
+    funcionario['ano de nascimento'] = int(input('Ano de nascimento:'))
+    funcionario['carteira de trabalho'] = int(input('Carteira de trabalho (0 não tem):'))
+    funcionario['idade'] = 2024 - funcionario['ano de nascimento']
+    if funcionario['carteira de trabalho'] == 0:
+        dados['nome'] = funcionario['nome']
+        dados['idade'] = funcionario['idade']
+        dados['ctps'] = funcionario['carteira de trabalho']
+    else:
+        if funcionario['carteira de trabalho'] != 0:
+            funcionario['sexo'] = str(input('Sexo:'))
+            funcionario['ano de contratação'] = int(input('Ano de contratação:'))
+            funcionario['salário'] = float(input('Salário R$:'))
+            dados['nome'] = funcionario['nome']
+            dados['idade'] = funcionario['idade']
+            dados['ctps'] = funcionario['carteira de trabalho']
+            dados['ano de contratação'] = funcionario['ano de contratação']
+            dados['salário'] = funcionario['salário']
+        if funcionario['sexo'] == 'm':
+            dados['aposentadoria'] = (dados['ano de contratação'] + 35) - funcionario['ano de nascimento']
+        elif funcionario['sexo'] == 'f':
+            dados['aposentadoria'] = (dados['ano de contratação'] + 30) - funcionario['ano de nascimento']
+    print('--------------------------')
+for k, v in dados.items():
+    print(f'- {k} tem o valor de {v}')
